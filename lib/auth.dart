@@ -1,3 +1,3 @@
 library;
-export 'token_manager.dart';
-export 'token.dart';
+export 'src/token_manager.dart';
+export 'src/token.dart';

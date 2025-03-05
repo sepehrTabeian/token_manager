@@ -1,9 +1,10 @@
-import 'package:token_manager/secure_storage_service.dart';
-import 'package:token_manager/storage_service.dart';
-import 'package:token_manager/token.dart';
-import 'package:token_manager/token_validator.dart';
+import 'package:token_manager/src/secure_storage_service.dart';
+import 'package:token_manager/src/token_validator.dart';
 
 import 'constant.dart';
+import 'storage_service.dart';
+import 'token.dart';
+
 
 class TokenManager {
   late IStorageService _storageService;

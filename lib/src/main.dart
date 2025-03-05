@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:token_manager/token.dart';
-import 'package:token_manager/token_manager.dart';
+
+import 'token.dart';
+import 'token_manager.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

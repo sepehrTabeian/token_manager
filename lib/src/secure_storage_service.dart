@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:token_manager/storage_service.dart';
+
+import 'storage_service.dart';
 
 class SecureStorageService implements IStorageService {
   static final SecureStorageService _instance =
