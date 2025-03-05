@@ -1,3 +1,4 @@
+import 'package:token_manager/secure_storage_service.dart';
 import 'package:token_manager/storage_service.dart';
 import 'package:token_manager/token.dart';
 import 'package:token_manager/token_validator.dart';
@@ -5,14 +6,13 @@ import 'package:token_manager/token_validator.dart';
 import 'constant.dart';
 
 class TokenManager {
-  final IStorageService _storageService;
-  final ITokenValidator _tokenValidator;
+  late IStorageService _storageService;
+  late ITokenValidator _tokenValidator;
 
-  TokenManager({
-    required IStorageService storageService,
-    required ITokenValidator tokenValidator,
-  })  : _storageService = storageService,
-        _tokenValidator = tokenValidator;
+  TokenManager(){
+    _storageService = SecureStorageService();
+    _tokenValidator = TokenValidator();
+  }
 
   Future<bool> isTokenStored() async {
     String? token = await _storageService.read(Constants.accessToken);
